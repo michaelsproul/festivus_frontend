@@ -1,0 +1,26 @@
+{
+  "name": "festivus_frontend",
+  "version": "1.0.0",
+  "description": "Household power and energy monitoring.",
+  "main": "src/js/app.js",
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "moment": "^2.10.6",
+    "plotly.js": "^1.1.1",
+    "urijs": "^1.17.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelsproul/festivus_frontend.git"
+  },
+  "author": "Michael Sproul",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/michaelsproul/festivus_frontend/issues"
+  },
+  "homepage": "https://github.com/michaelsproul/festivus_frontend#readme"
+}

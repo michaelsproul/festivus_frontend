@@ -2,37 +2,16 @@
 <html>
 <head>
     <title>FESTIVUS</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/app.min.js"></script>
+    <!--
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.17.0/URI.min.js"></script>
+    -->
 </head>
 <body>
-    <div id="power_chart" style="width: 600px; height: 250px;"></div>
-    <script>
-    // Sample plot.
-    var data = {
-        type: "scatter",
-        x: [1, 2, 3, 4, 5],
-        y: [1, 8, 27, 64, 125]
-    };
-    Plotly.plot("power_chart", [data], { margin: { t: 0 } });
-
-    // Proper data fetching.
-    var today_start = moment({hour: 0, minute: 0, second: 0});
-    var now = moment();
-    var url = URI("http://localhost:3000/power").query({
-        start: today_start.toISOString(),
-        end: now.toISOString(),
-    }).build() + "&callback=?";
-    console.log("Requesting data from:", url);
-    // FIXME: Make the server do JSONP.
-    jQuery.getJSON(url).done(function(data) {
-        console.log(data);
-    }).error(function(a, b, c) {
-        window.alert("SHIT WENT WRONG");
-        console.log(a, b, c);
-    });
-    </script>
+    <div id="power_chart" style="width: 100%; height: 80%;"></div>
 </body>
 </html>
